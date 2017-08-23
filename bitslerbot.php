@@ -7,6 +7,9 @@ $_SESSION['lose'] = 0;
 $config = include "bitslerbot.config.php";
 $bitslerbot = new BitslerBOT\ngepet($config['token'], $config['uname']);
 
+echo "\n  # BitslerBOT v1 (Beta)";
+echo "\n  # @ 2017, dw1\n\n";
+
 while (true) {
 	$amount = ($_SESSION['amount'] == 0 ? ($config['amount']*0.00000001) : $_SESSION['amount']);
 	$bet = $bitslerbot->caraycruz($amount, $config['choose']);

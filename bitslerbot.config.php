@@ -6,7 +6,7 @@ return array(
 
 	/* for Cara Y Cruz
 	true  -	true  -	true  -	true
-	0-0-1 ,	1-1-1 ,	1-1-0 ,	0-0-0
+	0-0-1 ,	0-0-0 ,	1-1-0 ,	1-1-1
 	--
 	But, you only choose max. 3 true.
 	e.g: true-true-true-false = 0-0-1,1-1-1,1-1-0

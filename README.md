@@ -8,6 +8,7 @@ BitslerBOT is a PHP tool designed betting automatically to maximize the chance o
 ```
 git clone https://github.com/dwisiswant0/BitslerBOT.git
 ```
+Or download the archive in [releases tab](https://github.com/dwisiswant0/BitslerBOT/releases).
 
 ## Recommended PHP Version:
 BitslerBOT required **PHP 5+**, and currently tested on **PHP 7.0.17-2** *(CLI)*.
@@ -32,6 +33,9 @@ BitslerBOT required **PHP 5+**, and currently tested on **PHP 7.0.17-2** *(CLI)*
 ```
 $ php bitsler.php
 ```
+
+## Help
+If you are still confused, please go to the [Wiki page](https://github.com/dwisiswant0/BitslerBOT/wiki) or [open the issue](https://github.com/dwisiswant0/BitslerBOT/issues). 
 
 ## License
 **BitslerBOT** is licensed under the MIT. Take a look at the [LICENSE](https://github.com/dwisiswant0/BitslerBOT/blob/master/LICENSE) for more information.

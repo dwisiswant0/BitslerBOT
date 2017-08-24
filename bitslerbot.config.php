@@ -9,7 +9,7 @@ return array(
 	0-0-1 ,	0-0-0 ,	1-1-0 ,	1-1-1
 	--
 	But, you only choose max. 3 true.
-	e.g: true-true-true-false = 0-0-1,1-1-1,1-1-0
+	e.g: true-true-true-false = 0-0-1,0-0-0,1-1-0
 	*/
 	"choose" => "true-true-true-false",
 

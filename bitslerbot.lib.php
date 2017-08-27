@@ -3,48 +3,54 @@ namespace dwisiswant0\BitslerBOT;
 define("OS", (PHP_OS == "Linux" ? 1 : 0));
 
 /**
-* Bitsler BOT v1.0
+* Bitsler BOT v1.1
 * Please get updated on my GitHub (dwisiswant0)
 * --
 * Change the author name don't make you become a coder
 * @ 2017 dw1
 **/
 
-const API = "https://script.google.com/macros/s/AKfycbx2A79duwrVxCua1n5ivMKsDG3N2qv0G4em8u9XGpgsNMuvZHUL/exec?";
+const API = "https://www.bitsler.com/api";
 
 class ngepet {
     public function __construct($access_token, $username) {
         $this->access_token = $access_token;
-        $this->username     = $username;
+        $this->username = $username;
     }
     
-    private function get($data) {
-        $context  = stream_context_create(array(
+    private function call($data, $endpoint) {
+        $context = stream_context_create(array(
             "http" => array(
-                "method" => "GET"
-            )
+                "method" => "POST",
+                "header" => implode("\r\n", array(
+		            "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10; rv:33.0) Gecko/20100101 Firefox/33.0",
+		            "Content-Type: application/x-www-form-urlencoded; charset=UTF-8",
+		            "X-Requested-With: XMLHttpRequest"
+		        )),
+                "content" => "access_token=" . $this->access_token . "&username=" . $this->username . "&" . $data,
+            ),
         ));
 
-        $response = file_get_contents(API . $data, false, $context);
+        $response = file_get_contents(API . $endpoint, false, $context);
         
-        if (strpos($http_response_header[0], "302") == true) {
-            return json_decode($response, true);
+        if (strpos($http_response_header[0], "200") == true) {
+            return json_decode($response, true)['return'];
         } else {
-            exit("Something wrong, but Idk why.");
+            exit("Something wrong, but Idk why.\n");
         }
     }
     
     public function getbalance() {
-        $data = "act=balance&token=" . $this->access_token . "&uname=" . $this->username;
-        return $this->get($data);
+        return $this->call("_", "/get-balances");
     }
     
     public function caraycruz($amount, $choose) {
-        $data = "act=bet&token=" . $this->access_token . "&uname=" . $this->username . "&amount=" . $amount . "&choose=" . $choose;
-        return $this->get($data);
+        $data = "type=caraycruz&version=1&amount=" . $amount . "&choose=" . $choose . "&devise=btc";
+        return $this->call($data, "/bet");
     }
     
     public function roll_dice($amount, $condition, $game) {
-        // on progress
+        $data = "type=dice&amount=" . $amount . "&condition=" . urlencode($condition) . "&game=" . $game . "&devise=btc";
+        return $this->call($data, "/bet");
     }
 }

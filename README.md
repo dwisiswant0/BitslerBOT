@@ -20,7 +20,7 @@ Or download the archive in [releases tab](https://github.com/dwisiswant0/Bitsler
 BitslerBOT required **PHP 5+**, and currently tested on **PHP 7.0.17-2** *(CLI)*.
 
 ## Configuration
->[bitslerbot.config.php](https://github.com/dwisiswant0/BitslerBOT/blob/v1.1/bitslerbot.config.php)
+>[bitslerbot.config.php](https://github.com/dwisiswant0/BitslerBOT/blob/v1.2/bitslerbot.config.php)
 ```php
 	"token" => "...", // SHA512. Go to www.bitsler.com & login, in console browser (PRESS F12) type: console.log(access_token)
 	"uname" => "...", // your Bitsler username
@@ -41,4 +41,4 @@ If you are still confused, please go to the [Wiki page](https://github.com/dwisi
 **BitslerBOT** is licensed under the MIT. Take a look at the [LICENSE](https://github.com/dwisiswant0/BitslerBOT/blob/master/LICENSE) for more information.
 
 ## Version
-**Current version is 1.1** (stable) and still development.
+**Current version is 1.2** (fixed) and still development.

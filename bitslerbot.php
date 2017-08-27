@@ -25,6 +25,7 @@ while (true) {
 	if ($status === false) {
 		$_SESSION['amount'] = 0;
 		$_SESSION['lose'] = 0;
+		sleep(1);
 	} else {
 		$_SESSION['amount'] = ((float) $bet['amount'] * (int) $config['multiply']);
 		$_SESSION['lose']++;

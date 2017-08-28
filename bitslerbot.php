@@ -9,7 +9,7 @@ $bitslerbot = new BitslerBOT\ngepet($config['token'], $config['uname']);
 // $balance = $bitslerbot->getbalance();
 
 #############################
-echo "\n  # BitslerBOT v1.1";
+echo "\n  # BitslerBOT v1.2";
 echo "\n  # @ 2017, dw1\n\n";
 #############################
 

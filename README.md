@@ -1,5 +1,5 @@
 ## About BitslerBOT
-BitslerBOT is a PHP tool designed betting automatically to maximize the chance of winning in gambling on [Bitsler.com](https://www.bitsler.com/?ref=iniakundwi). There are 4 games in [Bitsler.com](https://www.bitsler.com/?ref=iniakundwi), including: *Dice*, *Roullete*, *Multicolor* & *CaraYCruz*.
+BitslerBOT is a PHP tool designed betting automatically to maximize the chance of winning in gambling on [Bitsler.com](https://www.bitsler.com/?ref=dwisiswanto). There are 4 games in [Bitsler.com](https://www.bitsler.com/?ref=iniakundwi), including: *Dice*, *Roullete*, *Multicolor* & *CaraYCruz*.
 
 ## Screenshots
 > CaraYCruz BOT
